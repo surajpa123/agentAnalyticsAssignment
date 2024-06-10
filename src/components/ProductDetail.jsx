@@ -16,7 +16,7 @@ const ProductDetail = ({ match }) => {
               <img
                 src={productDetails[0]?.image}
                 alt={productDetails[0]?.title}
-                className="w-full h-64 object-cover"
+                className="w-64 h-64 object-cover m-auto"
               />
             </div>
           )}

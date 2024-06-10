@@ -23,7 +23,7 @@ const ProductCard = ({ product, onDelete }) => {
           <img
             src={product?.image}
             alt={product?.title}
-            className="w-full h-64 object-cover"
+            className="w-64 h-64 object-cover m-auto"
           />
         </div>
       )}
