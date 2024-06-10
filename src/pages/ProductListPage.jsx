@@ -17,10 +17,8 @@ const ProductListPage = () => {
   const [isModalCreateProd, setIsModalCreateProd] = useState(false);
 
   useEffect(() => {
-    if (products?.length === 0) {
-      dispatch(getProducts());
-    }
-  }, []);
+    dispatch(getProducts());
+  }, [dispatch]);
 
   useEffect(() => {
     const filtered = products?.filter((product) =>

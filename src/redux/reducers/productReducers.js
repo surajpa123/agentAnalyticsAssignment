@@ -6,7 +6,6 @@ const initialState = {
 };
 
 const productReducer = (state = initialState, action) => {
-    console.log(action.payload,state.products,'payload')
   switch (action.type) {
     case GET_PRODUCTS:
       return { ...state, products: action.payload };

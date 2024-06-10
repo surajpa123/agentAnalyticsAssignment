@@ -20,7 +20,7 @@ const ProductForm = ({ id, productDetail, onClose }) => {
 
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  const productDetails = useSelector((state) => state.products.productDetails);
+  const {productDetails,loading} = useSelector((state) => state.products.productDetails);
 
   useEffect(() => {
     if (!id && !productDetail) {
