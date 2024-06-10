@@ -1,0 +1,25 @@
+{
+  "products": [
+    {
+      "id": "1",
+      "title": "Product 5",
+      "price": "100",
+      "description": "Description of Product 1",
+      "image": "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg"
+    },
+    {
+      "id": "2",
+      "title": "Product 2",
+      "price": 19.99,
+      "description": "Description of Product 2",
+      "image": "https://fakestoreapi.com/img/71-3HjGNDUL._AC_SY879._SX._UX._SY._UY_.jpg"
+    },
+    {
+      "id": "949b9a28-c6a2-48b2-9ee2-d8ab64df63b0",
+      "title": "Test product",
+      "price": "30",
+      "description": "Description of Product 3",
+      "image": "https://fakestoreapi.com/img/61pHAEJ4NML._AC_UX679_.jpg"
+    }
+  ]
+}
