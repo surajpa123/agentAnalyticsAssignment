@@ -8,6 +8,7 @@ import CreateProductPage from './pages/CreateProductPage';
 import EditProductPage from './pages/EditProductPage';
 
 const App = () => {
+  
   return (
     <Router>
       <div className="container mx-auto p-4">
