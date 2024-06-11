@@ -6,15 +6,17 @@ import ProductCard from "../components/ProductCard";
 import Modal from "../components/Modal";
 import ProductForm from "../components/ProductForm";
 import { toast } from "react-toastify";
+import FullScreenLoader from "../components/FullScreenLoader";
 
 const ProductListPage = () => {
   const dispatch = useDispatch();
-  const { products, loading, error } = useSelector((state) => state.products);
+  const { products,loading, error } = useSelector((state) => state.products);
 
   const [searchTerm, setSearchTerm] = useState("");
   const [filteredProducts, setFilteredProducts] = useState([]);
 
   const [isModalCreateProd, setIsModalCreateProd] = useState(false);
+
 
   useEffect(() => {
     dispatch(getProducts());
@@ -27,8 +29,9 @@ const ProductListPage = () => {
     setFilteredProducts(filtered);
   }, [products, searchTerm]);
 
+
   if (loading) {
-    return <div>Loading...</div>;
+    return <FullScreenLoader/>;
   }
 
   if (error) {

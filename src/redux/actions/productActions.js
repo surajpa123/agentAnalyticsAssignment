@@ -5,21 +5,29 @@ export const GET_PRODUCT_DETAILS = "GET_PRODUCT_DETAILS";
 export const CREATE_PRODUCT = "CREATE_PRODUCT";
 export const UPDATE_PRODUCT = "UPDATE_PRODUCT";
 export const DELETE_PRODUCT = "DELETE_PRODUCT";
+export const GET_PRODUCTS_REQUEST = "GET_PRODUCTS_REQUSTE";
+export const GET_PRODUCTS_SUCESS = "GET_PRODUCTS_SUCESS";
+export const GET_PRODUCTS_FAILURE = "GET_PRODUCTS_FAILURE";
 
 const BASE_URL = "https://product-data-rfrw.onrender.com";
 
 export const getProducts = () => async (dispatch) => {
   const getProducts = async () => {
+    dispatch({ type: GET_PRODUCTS_REQUEST });
+
     try {
       const response = await axios.get(`${BASE_URL}/products`);
       return response.data;
     } catch (error) {
-      throw new Error("Error fetching products");
+      dispatch({
+        type: GET_PRODUCTS_FAILURE,
+        error: "Error fetching products",
+      });
     }
   };
   const newProd = await getProducts();
-  console.log(newProd, "newProd");
-  dispatch({ type: GET_PRODUCTS, payload: newProd });
+
+  dispatch({ type: GET_PRODUCTS_SUCESS, payload: newProd });
 };
 
 export const getProductDetails = (id) => async (dispatch) => {
